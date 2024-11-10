@@ -109,7 +109,7 @@
         <div class="container-fluid">
             <div class="page-block">
                 <div class="text-center">
-                    <p class="light-gray mb-32 ">我是“缘分时光”的智能匹配AI，我给你推荐的相亲对象是</p>
+                    <p class="light-gray mb-32 " id="adviceSource">我是“缘分时光”的智能匹配AI，我给你推荐的相亲对象是</p>
                     <div>
                         <img id="male" src="static/picture/人脸2-模糊.png" alt="user" width="400" height="400">
                         <img id="female" src="static/picture/人脸3-模糊.png" alt="user" width="400" height="400">
@@ -325,6 +325,9 @@
                 let img = document.getElementById("female");
                 img.style.display = "none";
             }
+            var adviceSource = window.sessionStorage.getItem('adviceSource');
+            console.log(adviceSource)
+            document.getElementById('adviceSource').innerHTML = `我是“缘分时光”的${adviceSource}，我给你推荐的相亲对象是`
         })
 
 
