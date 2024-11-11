@@ -115,8 +115,11 @@
                         <img id="female" src="static/picture/人脸3-模糊.png" alt="user" width="400" height="400">
                     </div>
                     <p>
-                        感谢您参与我们的研究，接下来，请回到问卷，继续作答。
+                        感谢您参与我们的研究，接下来，请点击下面按钮回到问卷，继续作答。
                     </p>
+                    <a href="javascript:window.opener=null;window.close();" class="cus-btn">
+                        <span class="btn-text">返回问卷</span>
+                    </a> 
                     <!-- <a href="index.html" class="cus-btn">
                         <span class="btn-text">back to homepage</span>
                     </a> -->
@@ -327,7 +330,7 @@
             }
             var adviceSource = window.sessionStorage.getItem('adviceSource');
             console.log(adviceSource)
-            document.getElementById('adviceSource').innerHTML = `我是“缘分时光”的${adviceSource}，我给你推荐的相亲对象是`
+            document.getElementById('adviceSource').innerHTML = `我是“缘分时光”的<strong>${adviceSource}</strong>，我给你推荐的相亲对象是`
         })
 
 
